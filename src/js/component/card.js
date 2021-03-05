@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export function Card(props) {
 	return (
-		<div className="Card shadow-lg my-3">
+		<div className="Card shadow-lg my-3 text-center">
 			<img className="img-fluid" src={props.img} alt="..." />
 			<div className="card-body">
 				<h5 className="card-title">{props.title}</h5>
