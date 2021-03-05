@@ -8,14 +8,22 @@ import { Footer } from "./footer";
 export function Home() {
 	return (
 		<div>
-			<Navbar />
-			<Jumbotron
-				title="A Warm Welcome!"
-				contendo="This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
-				btntext="Call to Action"
+			<Navbar
+				title="Grupo7"
+				index=" Home"
+				About="About"
+				servicios="Services"
+				contacto="Contact"
 			/>
-			<CardConteiner />
-			<Footer />
+			<div className="container">
+				<Jumbotron
+					title="A Warm Welcome!"
+					contenido="This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
+					btntext="Call to Action"
+				/>
+				<CardConteiner />
+			</div>
+			<Footer cpy="© Copyright:" linText="Your Website 2019" />
 		</div>
 	);
 }

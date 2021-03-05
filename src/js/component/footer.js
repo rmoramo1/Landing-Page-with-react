@@ -1,14 +1,19 @@
 import React from "react";
+import Proptypes from "prop-types";
 
-export function Footer() {
+export function Footer(props) {
 	return (
-		<footer className="bg-light text-center text-lg-start">
+		<footer className="bg-dark text-center text-lg-start text-white">
 			<div className="text-center p-3">
-				© Copyright:
-				<a className="text-dark" href="#">
-					Your Website 2019
+				{props.cpy}
+				<a className="text-white" href="#">
+					{props.linText}
 				</a>
 			</div>
 		</footer>
 	);
 }
+Footer.propTypes = {
+	cpy: Proptypes.string,
+	linText: Proptypes.string
+};

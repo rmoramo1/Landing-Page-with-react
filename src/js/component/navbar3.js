@@ -1,14 +1,17 @@
 //import react into the bundle
 import React from "react";
+import PropTypes from "prop-types";
 
 //import your own components
-export function Navbar() {
+export function Navbar(props) {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3">
 			<div className="container-fluid">
-				<a className="navbar-brand" href="#">
-					Grupo7
-				</a>
+				<div className="col-4">
+					<a className="navbar-brand" href="#">
+						{props.title}
+					</a>
+				</div>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -20,27 +23,28 @@ export function Navbar() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div
-					className="collapse navbar-collapse"
+					className="col-8 collapse navbar-collapse"
 					id="navbarNavAltMarkup">
-					<div className="navbar-nav">
+					<div className="col-8"></div>
+					<div className="navbar-nav col-4">
 						<a
 							className="nav-link active"
 							aria-current="page"
 							href="#">
-							Home
+							{props.index}
 						</a>
 						<a className="nav-link" href="#">
-							About
+							{props.About}
 						</a>
 						<a className="nav-link" href="#">
-							Services
+							{props.servicios}
 						</a>
 						<a
 							className="nav-link disabled"
 							href="#"
 							tabIndex="-1"
 							aria-disabled="true">
-							Contact
+							{props.contacto}
 						</a>
 					</div>
 				</div>
@@ -48,3 +52,10 @@ export function Navbar() {
 		</nav>
 	);
 }
+Navbar.propTypes = {
+	title: PropTypes.string,
+	index: PropTypes.string,
+	About: PropTypes.string,
+	servicios: PropTypes.string,
+	contacto: PropTypes.string
+};

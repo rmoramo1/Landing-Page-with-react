@@ -1,27 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export function Card(props) {
 	return (
-		<div className="Card">
-			<img
-				src="https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/4G_LOGO_NEGRO-01__1_/original.png?1560209943"
-				className="card-img-top"
-				alt="..."
-			/>
+		<div className="Card shadow-lg my-3">
+			<img className="img-fluid" src={props.img} alt="..." />
 			<div className="card-body">
-				<h5 className="card-title">Card title</h5>
-				<p className="card-text">
-					Some quick example text to build on the card title and make
-					up the bulk of the cards content.
-				</p>
+				<h5 className="card-title">{props.title}</h5>
+				<p className="card-text">{props.texto}</p>
 				<a href="#" className="btn btn-primary">
-					Go somewhere
+					{props.linkTexto}
 				</a>
 			</div>
 		</div>
 	);
 }
-
-export function sum() {
-	return 8;
-}
+Card.propTypes = {
+	title: PropTypes.string,
+	texto: PropTypes.string,
+	linkTexto: PropTypes.string,
+	img: PropTypes.string
+};
