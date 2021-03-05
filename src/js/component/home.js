@@ -1,24 +1,16 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import { Navbar } from "./navbar.js";
+import { Jumbotron } from "./jumbotron.js";
 
 //create your first component
 export function Home() {
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<Navbar />
+			<Jumbotron />
+			title="A Warm Welcome!" contendo="This is a simple hero unit, a
+			simple jumbotron-style component for calling extra attention to
+			featured content or information." btntext="Call to Action" />
 		</div>
 	);
 }
