@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export function jumbotron(props) {
+export function Jumbotron(props) {
 	return (
 		<div className="jumbotron">
 			<h1 className="display-4">{props.title}</h1>
@@ -11,3 +12,9 @@ export function jumbotron(props) {
 		</div>
 	);
 }
+
+Jumbotron.propTypes = {
+	title: PropTypes.string,
+	contenido: PropTypes.string,
+	btntext: PropTypes.string
+};
